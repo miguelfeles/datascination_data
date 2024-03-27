@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Busca el Personaje</title>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #FFCF01;
+            border-radius: 5px;
+        }
+        input[type="text"] {
+            width: calc(100% - 10px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #000000;
+            color: #FFCF01;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #313131;
+        }
+        #character-info {
+            margin-top: 20px;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Búsqueda de Personajes</h1>
+        <input type="text" id="character-name" placeholder="Ingrese el número del personaje">
+        <button onclick=buscarPersonaje()>Buscar</button>
+        <div id="character-info"></div>
+    </div>
+    <div id="character-name"></div>
+    <script>
+    function buscarPersonaje() {
+        let nombre = document.getElementById("character-name").value;
+        let request = "https://www.swapi.tech/api/people/page/" + nombre;
+      
+        fetch(request)
+          .then(response => {
+            return response.json();
+          })
+          .then(data => {
+            let p = document.getElementById("character-name");
+            if (data.results.length > 0) {
+              p.innerHTML = JSON.stringify(data.results[0]);
+            } else {
+              p.innerHTML = "No se encontró ningún personaje con ese nombre.";
+            }
+          })
+          .catch(error => {
+            console.error('Error fetching data:', error);
+          });
+      }
+      </script>
+</body>
+</html>
