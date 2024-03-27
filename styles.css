@@ -1,0 +1,20 @@
+body {
+    background-image: url('p20kf8og8jg91.webp'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
+card.character-card .card-title {
+    font-size: 20px; 
+    color: #343a40; 
+    text-align: center; 
+}
+
+card.character-card .card-text {
+    font-size: 16px;
+    color: #6c757d; 
+}
+
+
+
