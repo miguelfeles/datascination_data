@@ -1,0 +1,33 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+#search {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+}
+
+#characters {
+    list-style: none;
+    padding: 0;
+}
+
+#characters li {
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+#character-detail {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
