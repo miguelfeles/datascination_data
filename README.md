@@ -20,3 +20,5 @@ Join our community on [Discord/Slack/Other Platform] to connect with other devel
 
 ## Let's Build Together!
 We believe in learning by doing and building as the best approach to mastering web development. This repository is not just a collection of challenges; it's a growing community of developers passionate about crafting beautiful and functional web experiences. So, dive in, start coding, and let's build amazing things together!
+
+--
